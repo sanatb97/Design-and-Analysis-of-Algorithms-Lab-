@@ -1,0 +1,44 @@
+DAA Lab - Session 1 - Intro with Sequential Search
+Introduction to the lab environment.
+Brute Force: Implementation of Sequential Search algorithm
+Demonstrate the usage of lab environment using a sample program implementing Sequential Search algorithm searching for an integer in an array of integers
+
+Problem Definition: Search for an integer in an array of integers using Sequential Search algorithm. Print the index (0-based) of the first occurrence of the integer in the array and the execution time.
+
+Input: Input begins with n (1 ≤ n ≤ 220) of number of integers. The following n lines has an integer per line (-220 ≤ integer ≤ 220). The following line has an integer to be searched.
+ 
+Output: Print the index (0-based) of the first integer matched by Sequential Search (print “-1” in case of unsuccessful search) in the first line and print the time taken (in seconds) in a new line upto 6 decimal places.  
+
+Sample Input:
+6
+999999
+0
+1234
+-999999
+1234
+-1234
+1234
+ 
+Sample Output:
+2
+0.123456 sec.
+
+Algorithm:
+Algorithm SequentialSearch(A[0..n-1], K)
+//Searches for a key in an array using sequential search.
+//Input: An array A[0..n-1] and a search key K.
+//Output: The index of the first element of A that matches K 
+//		or -1 if there are no matching elements.
+i ← 0
+while (i < n) do
+if (A[i] = K)
+  return i
+i ← i + 1
+endwhile
+return -1
+
+Practice-Problems:
+1. Instead of the first occurrence, print the index (0-based) of the last occurrence of the integer in the array and the execution time.
+2. Print indices (0-based) of all occurrences of the integer in the array and the execution time.
+3. Search name in an array of names where a name is a string of characters of any length.
+4. Search a key in a matrix of elements with r rows and c columns.
